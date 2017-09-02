@@ -104,7 +104,7 @@
 </template>
 
 <script>
-  /*  const pullRefresh = resolve => require(['../components/pullRefreshs.vue'], resolve)*/
+ /*   const pullRefresh = resolve => require(['../components/pullRefreshs.vue'], resolve)*/
     
     export default {
         data () { 
@@ -130,7 +130,7 @@
                 ]
             }
         },
-       /* components: {
+        /*components: {
             pullRefresh
         },*/
         created () {
@@ -172,6 +172,7 @@
     `
     /*-- npm --*/
     npm install --save vue-pull-to-refresh
+    npm install --save sass-loader node-sass
     `
                     this.codeFirst.js = 
     `
