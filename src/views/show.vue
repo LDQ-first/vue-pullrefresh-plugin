@@ -104,7 +104,7 @@
 </template>
 
 <script>
-    const pullRefresh = resolve => require(['../components/pullRefreshs.vue'], resolve)
+  /*  const pullRefresh = resolve => require(['../components/pullRefreshs.vue'], resolve)*/
     
     export default {
         data () { 
@@ -130,9 +130,9 @@
                 ]
             }
         },
-        components: {
+       /* components: {
             pullRefresh
-        },
+        },*/
         created () {
             this.setCode()
             this.setYear()
@@ -143,11 +143,16 @@
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
                         this.panel = this.panel ? 0 : 1 
-                        this.message = [
+                        this.message = this.panel ? [
                             {name: 'name', value: 'Vue'},
                             {name: 'age', value: '4'},
                             {name: 'address', value: "Vue's home"},
                             {name: 'phone', value: '888866662222'},
+                        ] : [
+                            {name: 'name', value: 'LDQ-first'},
+                            {name: 'age', value: '22'},
+                            {name: 'address', value: 'address'},
+                            {name: 'phone', value: '1314520'},
                         ]
                         resolve()
                     }, 1200)

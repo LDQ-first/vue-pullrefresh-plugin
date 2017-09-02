@@ -7,6 +7,8 @@ import 'highlight.js/styles/atom-one-dark.css'
 
 import VueRipple from 'vue-useripple'
 Vue.use(VueRipple)
+import VuePullToRefresh from 'vue-pull-to-refresh'
+Vue.use(VuePullToRefresh)
 
 Vue.config.productionTip = false
 
