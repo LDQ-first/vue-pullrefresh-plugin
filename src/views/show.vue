@@ -72,10 +72,6 @@
                             <img class="remind-img" src="../assets/icon/resume.svg">
                             <strong>next function must return promise</strong>
                         </span>
-                        <span class="keypoint">
-                            <img class="remind-img" src="../assets/icon/resume.svg">
-                            <strong>This plugin rely on sass</strong>
-                        </span>
                         <span>
                             Ripple isn't necessary
                         </span>
@@ -176,7 +172,6 @@
     `
     /*-- npm --*/
     npm install --save vue-pull-to-refresh
-    npm install --save sass-loader node-sass
     `
                     this.codeFirst.js = 
     `
