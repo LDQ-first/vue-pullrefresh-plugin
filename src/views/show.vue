@@ -66,7 +66,7 @@
                     <p class="remind">
                          <span class="keypoint">
                             <img class="remind-img" src="../assets/icon/resume.svg">
-                            <strong>You should restart vue after finishing install vue-usemodal</strong>
+                            <strong>You should restart vue after finishing install vue-pull-to-refresh</strong>
                         </span>
                          <span class="keypoint">
                             <img class="remind-img" src="../assets/icon/resume.svg">
