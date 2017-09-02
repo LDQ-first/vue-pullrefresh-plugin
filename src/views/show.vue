@@ -1,12 +1,13 @@
 <template>
-    <div class="show">
+     <pull-refresh :next="pullRefresh">
+    <div slot="list" class="show">
         <header>
             <h1>Vue Modal Plugin</h1>
         </header>
         <article>
             
-            <pull-refresh :next="pullRefresh">
-                <div slot="list" class="slotList">   
+           
+                <div  class="slotList">   
                     <section  class="section-one" v-if="!panel">
                         <div class="ui">
                             <h2>Panel One</h2>
@@ -44,7 +45,7 @@
                         </div>
                     </section>
                 </div>
-           </pull-refresh>
+           
            <section class="section-first">
                 <div class="ui">
                     <h2>Use</h2>
@@ -79,7 +80,9 @@
                 </a>
             </p>
         </footer>
+        
     </div>
+    </pull-refresh>
 </template>
 
 <script>
