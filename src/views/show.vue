@@ -116,8 +116,9 @@
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
                         this.panel = this.panel ? 0 : 1 
+                        resolve()
                     }, 2000)
-                }).then(() => resolve())
+                })
             },
             setYear () {
                 const year = new Date().getFullYear()
