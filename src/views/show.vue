@@ -1,12 +1,11 @@
 <template>
-     <pull-refresh :next="pullRefresh">
+     <pull-refresh :next="pullRefresh"  language="English" loadingTip="Try To Loading ｡◕ᴗ◕｡"
+     :maxDistance="180">
     <div slot="list" class="show">
         <header>
             <h1>Vue Modal Plugin</h1>
         </header>
         <article>
-            
-           
                 <div  class="slotList">   
                     <section  class="section-one" v-if="!panel">
                         <div class="ui">
@@ -45,7 +44,6 @@
                         </div>
                     </section>
                 </div>
-           
            <section class="section-first">
                 <div class="ui">
                     <h2>Use</h2>
@@ -53,6 +51,10 @@
                          <span class="keypoint">
                             <img class="remind-img" src="../assets/icon/resume.svg">
                             <strong>You should restart vue after finishing install vue-usemodal</strong>
+                        </span>
+                         <span class="keypoint">
+                            <img class="remind-img" src="../assets/icon/resume.svg">
+                            <strong>next function must return promise</strong>
                         </span>
                         <span>
                             Ripple isn't necessary
@@ -120,7 +122,7 @@
                     setTimeout(() => {
                         this.panel = this.panel ? 0 : 1 
                         resolve()
-                    }, 2000)
+                    }, 1200)
                 })
             },
             setYear () {
