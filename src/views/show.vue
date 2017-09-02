@@ -21,7 +21,7 @@
                                             <li class="form-list-item" v-for="(item, index) of message" key="index">
                                                 <div class="list-item">
                                                     <span class="list-item-name">{{item.name}}</span>
-                                                    <p class="item-value">{{item.value}}</p>
+                                                    <p class="list-item-value">{{item.value}}</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -47,7 +47,7 @@
                                             <li class="form-list-item" v-for="(item, index) of message" key="index">
                                                 <div class="list-item">
                                                     <span class="list-item-name">{{item.name}}</span>
-                                                    <p class="item-value">{{item.value}}</p>
+                                                    <p class="list-item-value">{{item.value}}</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -71,6 +71,10 @@
                          <span class="keypoint">
                             <img class="remind-img" src="../assets/icon/resume.svg">
                             <strong>next function must return promise</strong>
+                        </span>
+                        <span class="keypoint">
+                            <img class="remind-img" src="../assets/icon/resume.svg">
+                            <strong>This plugin rely on sass</strong>
                         </span>
                         <span>
                             Ripple isn't necessary
@@ -223,10 +227,12 @@
     }
     .remind {
         width: 80%;
+        min-width: 320px;
         max-width: 800px;
+        box-sizing: border-box;
         margin: 20px auto;
         border: 2px solid #8BE388; 
-        padding: 20px 0;
+        padding: 20px 4px;
         background: #EEE;
         display: flex;
         flex-direction: column;
@@ -270,7 +276,6 @@
     .slotList {
     }
     .form-list  {
-        padding: 10px;
         .form-list-item {
             margin: 10px 0;
             .list-item {
@@ -285,9 +290,6 @@
                     align-items: center;
                 }
                 .list-item-value {
-                    width: calc(80% - 80px)
-                }
-                .item-value {
                     width:  calc(80% - 80px);
                     border: 2px solid #CC99CC;
                     padding: 0.5em 2em;
@@ -295,13 +297,16 @@
                     margin: 0;
                     height: 1em;
                     line-height: 1em;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
             }
         }
     }
      @mixin panel {
         border: 2px solid #8BE388; 
-        padding: 20px;
+        padding: 0.8em;
         background: #EEE;
         display: flex;
         flex-direction: column;
@@ -318,6 +323,7 @@
     .section-one, .section-two {
         .ripPanel.rippleWrapper {
             width: 80%;
+            min-width: 320px;
             max-width: 800px;
             margin: 20px auto;
         }

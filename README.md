@@ -96,8 +96,9 @@ maxDistance: {
 
 ```
 
+## Dependencies
 
-
+* SASS
 
 
 ## Build Setup
