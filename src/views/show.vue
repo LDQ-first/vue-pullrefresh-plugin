@@ -3,7 +3,7 @@
      :maxDistance="180">
     <div slot="list" class="show">
         <header>
-            <h1>Vue Modal Plugin</h1>
+            <h1>Vue Pull To Refresh Plugin</h1>
         </header>
         <article>
                 <div  class="slotList">   
@@ -17,6 +17,14 @@
                                     </header>
                                     <div class="content">
                                         <p>Panel One</p>
+                                        <ul class="form-list">
+                                            <li class="form-list-item" v-for="(item, index) of message" key="index">
+                                                <div class="list-item">
+                                                    <span class="list-item-name">{{item.name}}</span>
+                                                    <p class="item-value">{{item.value}}</p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </ripple>
@@ -35,6 +43,14 @@
                                     </header>
                                     <div class="content">
                                         <p>Panel Two</p>
+                                        <ul class="form-list">
+                                            <li class="form-list-item" v-for="(item, index) of message" key="index">
+                                                <div class="list-item">
+                                                    <span class="list-item-name">{{item.name}}</span>
+                                                    <p class="item-value">{{item.value}}</p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </ripple>
@@ -106,6 +122,12 @@
                 codeTwo: {
                     html: ''
                 },
+                message: [
+                    {name: 'name', value: 'LDQ-first'},
+                    {name: 'age', value: '22'},
+                    {name: 'address', value: 'address'},
+                    {name: 'phone', value: '1314520'},
+                ]
             }
         },
         components: {
@@ -121,6 +143,12 @@
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
                         this.panel = this.panel ? 0 : 1 
+                        this.message = [
+                            {name: 'name', value: 'Vue'},
+                            {name: 'age', value: '4'},
+                            {name: 'address', value: "Vue's home"},
+                            {name: 'phone', value: '888866662222'},
+                        ]
                         resolve()
                     }, 1200)
                 })
@@ -150,11 +178,24 @@
                     this.codeOne.html = 
     ` 
     <!--html-->
+     <pull-refresh :next="pullRefresh"  language="English" loadingTip="Try To Loading ｡◕ᴗ◕｡"
+     :maxDistance="180">
+    <div slot="list" class="show">
+        . . .
+    </div>
+    </pull-refresh>
    
     `
                     this.codeTwo.html =
     `
     <!--html-->
+     <!--html-->
+     <pull-refresh :next="pullRefresh"  language="English" loadingTip="Try To Loading ｡◕ᴗ◕｡"
+     :maxDistance="180">
+    <div slot="list" class="show">
+        . . .
+    </div>
+    </pull-refresh>
     
     `
                 
